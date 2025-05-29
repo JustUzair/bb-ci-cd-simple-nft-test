@@ -3,7 +3,7 @@ name: Test  Action
 on: [push]
 
 env:
-  BUILDBEAR_BASE_URL: "https://api.dev.buildbear.io"
+  BUILDBEAR_BASE_URL: "https://api.test.buildbear.io"
 
 jobs:
   test:
@@ -64,10 +64,10 @@ jobs:
 
       - name: Run BB Action Test
         run: forge test
-        
+
       - name: test_ci
         uses: BuildBearLabs/buildbear_x_action@feat/modify-payload-with-new-api
-        with: 
+        with:
           network: |
             [
               {
@@ -76,6 +76,6 @@ jobs:
             ]
 
           deploy-command: "make exe"
-          buildbear-token: "e114cbdc-8c85-43e2-8a7f-818c375c7e33"
+          buildbear-token: "f7445988-62c1-4c04-94b0-4bab8efd8417"
         env:
-          API_KEY: "e114cbdc-8c85-43e2-8a7f-818c375c7e33"
+          API_KEY: "f7445988-62c1-4c04-94b0-4bab8efd8417"
