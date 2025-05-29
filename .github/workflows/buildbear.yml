@@ -1,0 +1,25 @@
+name: Deploy to BuildBear
+
+on: [push]
+
+env:
+  BUILDBEAR_BASE_URL: { { env.BUILDBEAR_BASE_URL } }
+  API_KEY: { { secrets.BUILDBEAR_API_KEY } }
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to BuildBear
+        uses: BuildBearLabs/buildbear_x_action@feat/modify-payload-with-new-api
+        with:
+          network: |
+            [
+              {
+                "chainId": 1
+              }
+            ]
+
+          deploy-command: "make exe"
+          buildbear-token: { { secrets.BUILDBEAR_API_KEY } }
