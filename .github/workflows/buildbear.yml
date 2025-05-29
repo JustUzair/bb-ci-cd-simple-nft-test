@@ -3,7 +3,7 @@ name: Deploy to BuildBear
 on: [push]
 
 env:
-  BUILDBEAR_BASE_URL: { { env.BUILDBEAR_BASE_URL } }
+  BUILDBEAR_BASE_URL: { { secrets.BUILDBEAR_BASE_URL } }
   API_KEY: { { secrets.BUILDBEAR_API_KEY } }
 
 jobs:
