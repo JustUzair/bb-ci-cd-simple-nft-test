@@ -3,8 +3,8 @@ name: Deploy to BuildBear
 on: [push]
 
 env:
-  BUILDBEAR_BASE_URL: ${{ secrets.BUILDBEAR_BASE_URL }}
-  API_KEY: ${{ secrets.BUILDBEAR_API_KEY }}
+  BUILDBEAR_BASE_URL: https://api.test.buildbear.io/v1
+  # API_KEY: ${{ secrets.BUILDBEAR_API_KEY }}
 
 jobs:
   test:
