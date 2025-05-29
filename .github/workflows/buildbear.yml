@@ -4,7 +4,7 @@ on: [push]
 
 env:
   BUILDBEAR_BASE_URL: https://api.test.buildbear.io/v1/
-  # API_KEY: ${{ secrets.BUILDBEAR_API_KEY }}
+  API_KEY: ${{ secrets.BUILDBEAR_API_KEY }}
 
 jobs:
   test:
