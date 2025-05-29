@@ -9,12 +9,8 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
-    environment: test
 
     steps:
-      - name: Dummy step to trigger CI
-        run: echo "Triggering BuildBear deployment"
-
       - name: Deploy to BuildBear
         uses: BuildBearLabs/buildbear_x_action@feat/modify-payload-with-new-api
         with:
