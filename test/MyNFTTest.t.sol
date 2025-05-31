@@ -25,4 +25,8 @@ contract MyNFTTest is Test, IERC721Receiver {
     function onERC721Received(address, address, uint256, bytes memory) public virtual override returns (bytes4) {
         return this.onERC721Received.selector;
     }
+
+    function testCICDRevert() public pure {
+        revert("CICD test revert");
+    }
 }
